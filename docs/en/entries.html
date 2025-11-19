@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table {
+            display: block;
+            width: 100%;
+            border: 1px solid;
+            border-collapse: collapse;
+        }
+        td {
+            padding: 4px;
+        }
+    </style>
+</head>
+<body>
+    <a href="index.html">Main page</a> |
+    <a href="quick_start.html">Quick start</a> |
+    <a href="database.html">Database</a> |
+    <a href="entries.html">Entries</a> |
+    <a href="tools.html">Tools</a> |
+    <a href="help.html">Help</a>
+    <h3>Creating a new entry</h3>
+    To create a new entry, click the <i>New entry...</i> button.<br>
+    You will be prompted to copy the QR code from the application you want to set up TOTP in. To do so, right click the QR code and choose <i>Copy Image</i> in the context menu. Then, click <i>Yes</i> at the bottom of the page. If the context menu does not open when you right click, simply click <i>No</i>. If the application will be able to recognize the QR code, all parameters will be auto-filled. After clicking <i>Yes</i> or <i>No</i>, the <i>Edit entry</i> page will open.
+    <h3>Editing an entry</h3>
+    After creating a new entry, or after highlighting an entry and clicking the <i>Edit entry...</i> button, the <i>Edit entry</i> page will open.<br>
+    Here are the descriptions of all fields available:<br>
+    <table>
+        <tr>
+            <td>Name</td>
+            <td>The name of the entry that will be displayed on the main page in the <i>Name</i> column.</td>
+        </tr>
+        <tr>
+            <td>Secret</td>
+            <td>The shared secret used to generate the one-time password. It is a base32-encoded string that consists of letters and digits. When setting up the TOTP, it is typically displayed under the QR code or hidden behind a button like "Can't scan it?" (Google) or "setup key" (GitHub).</td>
+        </tr>
+        <tr>
+            <td>Notes</td>
+            <td>Your notes for the entry.</td>
+        </tr>
+    </table>
+    <br>Advanced fields:<br>
+    <table>
+        <tr>
+            <td>Algorithm</td>
+            <td>The hashing algorithm used. Defaults to "SHA1", the most common algorithm used.</td>
+        </tr>
+        <tr>
+            <td>Time step</td>
+            <td>The interval used to generate the one-time password. Defaults to 30 seconds as recommended in RFC 6238.</td>
+        </tr>
+        <tr>
+            <td>Origin time</td>
+            <td>The starting time used to generate the one-time password. Defaults to 0, the Unix epoch.</td>
+        </tr>
+        <tr>
+            <td>Code size</td>
+            <td>The length of the one-time password that is generated. Defaults to 6. Accepts values more than or equal to 1 and less than or equal to 10.</td>
+        </tr>
+    </table>
+    <h3>Deleting an entry</h3>
+    After highlighting an entry and clicking the <i>Delete entry...</i> button, the entry will be irreversibly deleted (unless you prevent the database from auto-saving).
+    <h3>Copying an entry</h3>
+    After highlighting an entry and clicking the <i>Copy TOTP</i> button, the current one-time password will be copied to the clipboard.
+</body>
+</html>
