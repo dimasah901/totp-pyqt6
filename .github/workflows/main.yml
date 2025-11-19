@@ -10,15 +10,15 @@ jobs:
       matrix:
         os: [ubuntu-latest, windows-latest, macOS-latest]
         include:
-          - format: .tgz
+          - format: tgz
             os: macOS-latest
           - archive: tar -czf
             os: macOS-latest
-          - format: .tar.gz
+          - format: tar.gz
             os: ubuntu-latest
           - archive: tar -czf
             os: ubuntu-latest
-          - format: .zip
+          - format: zip
             os: windows-latest
           - archive: tar.exe acf
             os: windows-latest
