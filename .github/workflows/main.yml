@@ -58,4 +58,5 @@ jobs:
           totp-pyqt6-${{ matrix.os }}.${{ matrix.format }}
           LICENSE
         tag_name: ${{ github.sha }}
+        token: ${{ secrets.GITHUB_TOKEN }}
         
