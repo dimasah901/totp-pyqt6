@@ -50,13 +50,3 @@ jobs:
       with:
         name: totp-pyqt6-${{ matrix.os }}.${{ matrix.format }}
         path: totp-pyqt6-${{ matrix.os }}.${{ matrix.format }}
-
-    - name: Release
-      uses: softprops/action-gh-release@v2
-      with:
-        files: |
-          totp-pyqt6-${{ matrix.os }}.${{ matrix.format }}
-          LICENSE
-        tag_name: ${{ github.sha }}
-        token: ${{ secrets.GITHUB_TOKEN }}
-        
