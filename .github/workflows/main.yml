@@ -32,7 +32,6 @@ jobs:
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
-        pyinstaller main.spec
         
     - name: Install pyinstaller
       run: |
