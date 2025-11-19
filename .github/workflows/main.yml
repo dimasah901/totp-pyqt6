@@ -43,11 +43,18 @@ jobs:
         
     - name: Package it
       run: |
-        ${{ matrix.archive }} app-${{ matrix.os }}.${{ matrix.format }} ./dist/main
+        ${{ matrix.archive }} totp-pyqt6-${{ matrix.os }}.${{ matrix.format }} ./dist/main
 
     - name: Upload build
       uses: actions/upload-artifact@v4
       with:
-        name: app-${{ matrix.os }}.${{ matrix.format }}
-        path: app-${{ matrix.os }}.${{ matrix.format }}
+        name: totp-pyqt6-${{ matrix.os }}.${{ matrix.format }}
+        path: totp-pyqt6-${{ matrix.os }}.${{ matrix.format }}
+
+    - name: Release
+      uses: softprops/action-gh-release@v2
+      with:
+        files: |
+          totp-pyqt6-${{ matrix.os }}.${{ matrix.format }}
+          LICENSE
         
