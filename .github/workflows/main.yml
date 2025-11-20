@@ -66,9 +66,7 @@ jobs:
     needs:
       - build
     permissions:
-      contents: |
-        read
-        write
+      contents: write
 
     steps:
     - uses: actions/checkout@v5
