@@ -40,13 +40,9 @@ jobs:
     - name: Build app
       run: |
         python -c "import PyInstaller.__main__; PyInstaller.__main__.run(['main.spec'])"
-        
-    - name: Package it
-      run: |
-        ${{ matrix.archive }} totp-pyqt6-${{ matrix.os }}.${{ matrix.format }} ./dist/main
 
     - name: Upload build
       uses: actions/upload-artifact@v4
       with:
-        name: totp-pyqt6-${{ matrix.os }}.${{ matrix.format }}
-        path: totp-pyqt6-${{ matrix.os }}.${{ matrix.format }}
+        name: totp-pyqt6-${{ matrix.os }}
+        path: dist/main/
