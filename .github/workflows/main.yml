@@ -1,5 +1,14 @@
 on:
   workflow_dispatch:
+    inputs:
+      tag_name:
+        description: |
+          v<major>.<minor>.<patch>
+          major - incompatible changes
+          minor - compatible features
+          patch - no features, better stability
+        required: true
+        default: "v1.0.0"
 
 jobs:
   build:
@@ -105,4 +114,4 @@ jobs:
         files: |
           artifacts/*.zip
           artifacts/*.tar.gz
-        tag_name: ${{ env.COMMIT_SHA }}
+        tag_name: ${{ github.event.inputs.tag_name }}
