@@ -76,33 +76,20 @@ jobs:
       uses: actions/download-artifact@v4
       with:
         path: artifacts
-
-          - format: tgz
-            os: macOS-latest
-          - archive: tar -czf
-            os: macOS-latest
-          - format: tar.gz
-            os: ubuntu-latest
-          - archive: tar -czf
-            os: ubuntu-latest
-          - format: zip
-            os: windows-latest
-          - archive: tar.exe acf
-            os: windows-latest
             
-    - name: .zip windows:
+    - name: .zip windows
       run: |
         pushd "./artifacts"
         zip -r ./totp-pyqt6-windows-latest.zip ./totp-pyqt6-windows-latest/
         popd
     
-    - name: .tar.gz linux:
+    - name: .tar.gz linux
       run: |
         pushd "./artifacts"
         tar -czvf ./totp-pyqt6-ubuntu-latest.tar.gz -C ./totp-pyqt6-ubuntu-latest/ .
         popd
     
-    - name: .tar.gz macOS:
+    - name: .tar.gz macOS
       run: |
         pushd "./artifacts"
         tar -czvf ./totp-pyqt6-macOS-latest.tar.gz -C ./totp-pyqt6-macOS-latest/ .
