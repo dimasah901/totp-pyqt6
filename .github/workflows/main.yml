@@ -26,9 +26,9 @@ jobs:
     steps:
     - uses: actions/checkout@v5
     - name: Get commit SHA
+      shell: pwsh
       run: |
-        COMMIT_SHA=$(git rev-parse HEAD)
-        echo "COMMIT_SHA=$COMMIT_SHA" >> $GITHUB_ENV
+        "COMMIT_SHA=$(git rev-parse --short HEAD)" >> $env:GITHUB_ENV
 
     - name: Restore from cache
       uses: actions/cache/restore@v4
