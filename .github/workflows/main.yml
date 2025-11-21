@@ -84,6 +84,14 @@ jobs:
         COMMIT_SHA=$(git rev-parse HEAD)
         echo "COMMIT_SHA=$COMMIT_SHA" >> $GITHUB_ENV
         
+    - name: Get the changelog
+      run: |
+        {
+          echo 'CHANGELOG<<EOF'
+          cat ./CHANGELOG.md
+          echo EOF
+        } >> "$GITHUB_ENV"
+        
     - name: Download Executables
       uses: actions/download-artifact@v4
       with:
@@ -91,8 +99,8 @@ jobs:
             
     - name: .zip windows
       run: |
-        pushd "./artifacts"
-        zip -r ./totp-pyqt6-windows-latest.zip ./totp-pyqt6-windows-latest/
+        pushd "./artifacts/totp-pyqt6-windows-latest/"
+        zip -r ../totp-pyqt6-windows-latest.zip .
         popd
     
     - name: .tar.gz linux
@@ -110,7 +118,10 @@ jobs:
     - name: Release
       uses: softprops/action-gh-release@v1
       with:
-        body: Automatic release.
+        body: |
+          Automatic release.
+          
+          ${{ env.CHANGELOG }}
         files: |
           artifacts/*.zip
           artifacts/*.tar.gz
