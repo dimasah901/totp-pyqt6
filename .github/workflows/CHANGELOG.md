@@ -1,0 +1,2 @@
+- Added libraries required for pyzbar to the Windows app release
+- The terminal no longer appears when opening the app
