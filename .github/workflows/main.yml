@@ -59,7 +59,7 @@ jobs:
     - name: Build app
       if: steps.restore.outputs.cache-hit != 'true'
       run: |
-        python -c "import PyInstaller.__main__; PyInstaller.__main__.run(['main.spec'])"
+        python -c "import PyInstaller.__main__; PyInstaller.__main__.run(['main.spec', '--windowed'])"
 
     - name: Save to cache
       if: steps.restore.outputs.cache-hit != 'true'
