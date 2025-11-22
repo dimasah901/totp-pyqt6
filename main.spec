@@ -1,5 +1,23 @@
 # -*- mode: python ; coding: utf-8 -*-
+import sys
+import os
+import pyzbar
 
+lib = []
+zbarpath = os.path.dirname(pyzbar.__file__)
+grab = []
+
+if sys.platform.startswith("win"):
+    grab.append("libiconv.dll")
+elif sys.platform == "darwin":
+    grab.append("libiconv.dylib")
+else:
+    grab.append("libiconv.so")
+    grab.append("libiconv.so.2")
+
+for entry in grab:
+    if os.path.exists(os.path.join(zbarpath, entry)):
+        lib.append((os.path.join(zbarpath, entry), '.'))
 
 a = Analysis(
     ['main.py'],
@@ -9,7 +27,7 @@ a = Analysis(
         ('docs', 'docs'),
         ('en_US.qm', '.'),
         ('ru_RU.qm', '.')
-    ],
+    ] + lib,
     hiddenimports=[],
     hookspath=[],
     hooksconfig={},
