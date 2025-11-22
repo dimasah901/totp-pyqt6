@@ -91,13 +91,13 @@ jobs:
         COMMIT_SHA=$(git rev-parse HEAD)
         echo "COMMIT_SHA=$COMMIT_SHA" >> $GITHUB_ENV
         
-    - name: Get the changelog
-      run: |
-        {
-          echo 'CHANGELOG<<EOF'
-          cat ./CHANGELOG.md
-          echo EOF
-        } >> "$GITHUB_ENV"
+#    - name: Get the changelog
+#      run: |
+#        {
+#          echo 'CHANGELOG<<EOF'
+#          cat ./CHANGELOG.md
+#          echo EOF
+#        } >> "$GITHUB_ENV"
         
     - name: Download Executables
       uses: actions/download-artifact@v4
@@ -127,8 +127,8 @@ jobs:
       with:
         body: |
           Automatic release.
-          
-          ${{ env.CHANGELOG }}
+#          
+#          ${{ env.CHANGELOG }}
         files: |
           artifacts/*.zip
           artifacts/*.tar.gz
