@@ -9,11 +9,15 @@ grab = []
 
 if sys.platform.startswith("win"):
     grab.append("libiconv.dll")
+    grab.append("libzbar-64.dll")
 elif sys.platform == "darwin":
     grab.append("libiconv.dylib")
+    grab.append("libzbar-64.dylib")
 else:
     grab.append("libiconv.so")
     grab.append("libiconv.so.2")
+    grab.append("libzbar-64.so")
+    grab.append("libzbar-64.so.2")
 
 for entry in grab:
     if os.path.exists(os.path.join(zbarpath, entry)):
