@@ -77,7 +77,7 @@ class MainWindow(QMainWindow):
     def help_anchor(self, path: QUrl):
         # loads the file and writes it to the help browser
         try:
-            with open(os.path.abspath(os.path.dirname(__file__))+"/docs/"+get_current_locale()+"/"+path.path(), 'r') as file:
+            with open(os.path.abspath(os.path.dirname(__file__))+"/docs/"+get_current_locale()+"/"+path.path(), 'r', encoding='utf8') as file:
                 self.ui.help_browser.document().setHtml(file.read())
         except FileNotFoundError:
             self.ui.help_browser.document().setPlainText(
