@@ -402,7 +402,7 @@ Save changes?</translation>
     </message>
     <message>
         <location filename="tab.ui" line="483"/>
-        <location filename="tab.ui" line="560"/>
+        <location filename="tab.ui" line="563"/>
         <source>TextLabel</source>
         <translation>TextLabel</translation>
     </message>
@@ -413,16 +413,26 @@ Save changes?</translation>
     </message>
     <message>
         <location filename="tab.ui" line="536"/>
-        <source>Right click on the QR code and click &quot;Copy Image&quot;. Then, click &quot;Yes&quot; here. If you are unable to copy the image, click &quot;No&quot;.</source>
-        <translation>Right click on the QR code and click &quot;Copy Image&quot;. Then, click &quot;Yes&quot; here. If you are unable to copy the image, click &quot;No&quot;.</translation>
+        <source>If you want to use a QR code to setup this entry, right-click the QR code image and choose &quot;Copy Image&quot;.
+If you were able to copy the image, choose &quot;Yes&quot;; if you couldn&apos;t, choose &quot;No&quot;.
+
+If you want to setup this entry manually, don&apos;t see a QR code, or see an error over the buttons below, choose &quot;No&quot;.</source>
+        <translation type="unfinished">If you want to use a QR code to setup this entry, right-click the QR code image and choose &quot;Copy Image&quot;.
+If you were able to copy the image, choose &quot;Yes&quot;; if you couldn&apos;t, choose &quot;No&quot;.
+
+If you want to setup this entry manually, don&apos;t see a QR code, or see an error over the buttons below, choose &quot;No&quot;.</translation>
     </message>
     <message>
-        <location filename="tab.ui" line="604"/>
+        <source>Right click on the QR code and click &quot;Copy Image&quot;. Then, click &quot;Yes&quot; here. If you are unable to copy the image, click &quot;No&quot;.</source>
+        <translation type="vanished">Right click on the QR code and click &quot;Copy Image&quot;. Then, click &quot;Yes&quot; here. If you are unable to copy the image, click &quot;No&quot;.</translation>
+    </message>
+    <message>
+        <location filename="tab.ui" line="619"/>
         <source>Enter the new password:</source>
         <translation>Enter the new password:</translation>
     </message>
     <message>
-        <location filename="tab.ui" line="623"/>
+        <location filename="tab.ui" line="638"/>
         <source>Enter the password again:</source>
         <translation>Enter the password again:</translation>
     </message>
