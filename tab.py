@@ -127,11 +127,11 @@ class Tab(QWidget):
                 except UnidentifiedImageError:
                     # unable to parse the image
                     self.ui.new_error.show()
-                    self.ui.new_error.setText("No image was provided")
+                    self.ui.new_error.setText(self.tr("No image was provided"))
                 except Exception as ex:
                     # something else about the qr decoder
                     self.ui.new_error.show()
-                    self.ui.new_error.setText(str(ex))
+                    self.ui.new_error.setText(self.tr("Internal error: ") + str(ex))
             case QDialogButtonBox.ButtonRole.NoRole:
                 # user does not have a qr code
                 self.ui.pages.setCurrentIndex(2)

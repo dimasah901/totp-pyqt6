@@ -37,46 +37,54 @@
         <translation>Файл недоступен.</translation>
     </message>
     <message>
-        <location filename="main.py" line="120"/>
-        <location filename="main.py" line="252"/>
-        <location filename="main.py" line="306"/>
-        <location filename="main.py" line="325"/>
+        <location filename="main.py" line="121"/>
+        <location filename="main.py" line="254"/>
+        <location filename="main.py" line="308"/>
+        <location filename="main.py" line="327"/>
         <source>Save changes?</source>
         <translation>Сохранить изменения?</translation>
     </message>
     <message>
-        <location filename="main.py" line="122"/>
-        <location filename="main.py" line="254"/>
-        <location filename="main.py" line="308"/>
-        <location filename="main.py" line="327"/>
+        <location filename="main.py" line="123"/>
+        <location filename="main.py" line="256"/>
+        <location filename="main.py" line="310"/>
+        <location filename="main.py" line="329"/>
         <source>The database was modified.
 Save changes?</source>
         <translation>База данных была изменена.
 Сохранить изменения?</translation>
     </message>
     <message>
-        <location filename="main.py" line="149"/>
-        <location filename="main.py" line="229"/>
+        <location filename="main.py" line="150"/>
+        <location filename="main.py" line="231"/>
         <source>Authenticator - {}</source>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="main.py" line="168"/>
+        <location filename="main.py" line="169"/>
         <location filename="main.ui" line="14"/>
         <source>Authenticator</source>
-        <translation></translation>
+        <translation type="unfinished">Authenticator</translation>
     </message>
     <message>
+        <location filename="welcome.ui" line="14"/>
+        <source>MainWindow</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="welcome.ui" line="54"/>
         <location filename="main.ui" line="67"/>
         <source>Open database</source>
         <translation>Открыть базу</translation>
     </message>
     <message>
+        <location filename="welcome.ui" line="73"/>
         <location filename="main.ui" line="86"/>
         <source>Create database</source>
         <translation>Создать базу</translation>
     </message>
     <message>
+        <location filename="welcome.ui" line="135"/>
         <location filename="main.ui" line="111"/>
         <location filename="main.ui" line="386"/>
         <source>Settings</source>
@@ -98,6 +106,7 @@ Save changes?</source>
         <translation>Выйти из помощи</translation>
     </message>
     <message>
+        <location filename="welcome.ui" line="96"/>
         <location filename="main.ui" line="261"/>
         <source>Database</source>
         <translation>База данных</translation>
@@ -108,17 +117,20 @@ Save changes?</source>
         <translation>Записи</translation>
     </message>
     <message>
+        <location filename="welcome.ui" line="103"/>
         <location filename="main.ui" line="282"/>
         <source>Tools</source>
         <translation>Инструменты</translation>
     </message>
     <message>
+        <location filename="welcome.ui" line="109"/>
         <location filename="main.ui" line="289"/>
         <location filename="main.ui" line="415"/>
         <source>Help</source>
         <translation>Помощь</translation>
     </message>
     <message>
+        <location filename="welcome.ui" line="120"/>
         <location filename="main.ui" line="302"/>
         <source>New database...</source>
         <translation>Новая база данных...</translation>
@@ -129,6 +141,7 @@ Save changes?</source>
         <translation>Ctrl+Shift+N</translation>
     </message>
     <message>
+        <location filename="welcome.ui" line="125"/>
         <location filename="main.ui" line="310"/>
         <source>Open a database...</source>
         <translation>Открыть базу данных...</translation>
@@ -224,6 +237,7 @@ Save changes?</source>
         <translation>Ctrl+,</translation>
     </message>
     <message>
+        <location filename="welcome.ui" line="130"/>
         <location filename="main.ui" line="394"/>
         <source>About</source>
         <translation>О приложении</translation>
@@ -252,27 +266,37 @@ Save changes?</source>
 <context>
     <name>Tab</name>
     <message>
-        <location filename="tab.py" line="160"/>
+        <location filename="tab.py" line="130"/>
+        <source>No image was provided</source>
+        <translation>Изображение не найдено</translation>
+    </message>
+    <message>
+        <location filename="tab.py" line="134"/>
+        <source>Internal error: </source>
+        <translation>Внутренняя ошибка: </translation>
+    </message>
+    <message>
+        <location filename="tab.py" line="159"/>
         <source>The passwords do not match!</source>
         <translation>Пароли не совпадают!</translation>
     </message>
     <message>
-        <location filename="tab.py" line="165"/>
+        <location filename="tab.py" line="164"/>
         <source>The password is shorter than 16 characters!</source>
         <translation>Пароль короче 16 символов!</translation>
     </message>
     <message>
-        <location filename="tab.py" line="172"/>
+        <location filename="tab.py" line="171"/>
         <source>Your password only consists of digits! Make sure the password is at least 28 digits long or use other characters too.</source>
         <translation>Ваш пароль состоит только из цифр! Ваш пароль должен состоять хотя бы из 28 цифр или содержать другие символы.</translation>
     </message>
     <message>
-        <location filename="tab.py" line="221"/>
+        <location filename="tab.py" line="220"/>
         <source>Error while reading the database: {}. The password you entered is incorrect, or the database is corrupted.</source>
         <translation>Ошибка при чтении базы данных: {}. Введенный пароль неверен, или база данных повреждена.</translation>
     </message>
     <message>
-        <location filename="tab.py" line="303"/>
+        <location filename="tab.py" line="302"/>
         <source>Unable to decode the secret provided: {}. Make sure that the secret is Base32 encoded.</source>
         <translation>Не удалось декодировать введенный секрет: {}. Убедитесь, что секрет закодирован в Base32.</translation>
     </message>
